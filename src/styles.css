@@ -1,51 +1,131 @@
-/* Reset basic styling */
-body, h1, h2, h3, p, ul {
+/* Global Styles */
+body {
     margin: 0;
     padding: 0;
-}
-
-body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-}
-
-header, footer {
-    background-color: #ffffff;
-    color: #ff9318;
-    text-align: center;
-    padding: 1rem;
-}
-
-nav ul {
-    list-style-type: none;
-    background-color: #3789d6;
-    overflow: hidden;
-    text-align: center;
-}
-
-nav ul li {
-    display: inline-block;
-    padding: 14px;
-}
-
-nav ul li a {
+    background: #f4f4f4;
+    color: #333;
+  }
+  
+  header nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    background: #333;
+    padding: 0;
+    margin: 0;
+  }
+  
+  header nav ul li {
+    margin: 0 1rem;
+  }
+  
+  header nav ul li a {
+    color: #fff;
     text-decoration: none;
-    color: white;
-    font-family:'Courier New', Courier, monospace;
-    font-weight: bold;
-}
-
-nav ul li a:hover {
-    color: #ff0;
-}
-
-main {
+    padding: 0.75rem 1rem;
+    display: inline-block;
+  }
+  
+  header nav ul li a:hover {
+    background: #444;
+  }
+  
+  /* Main Content Area */
+  main {
+    width: 90%;
+    max-width: 700px;
+    margin: 2rem auto;
+    background: #fff;
     padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  h1 {
     text-align: center;
-}
-
-button {
-    padding: 10px 20px;
-    font-size: 16px;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Form Styles using Grid */
+  form {
+    display: grid;
+    grid-template-columns: 1fr 2fr;  /* Labels and inputs */
+    gap: 1rem 2rem;
+    align-items: center;
+  }
+  
+  /* Labels */
+  form label {
+    text-align: right;
+    font-weight: bold;
+  }
+  
+  /* Inputs, Selects, Textareas */
+  form input[type="text"],
+  form input[type="email"],
+  form input[type="tel"],
+  form select,
+  form textarea {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  /* Button */
+  form button {
+    grid-column: 2 / 3;
+    padding: 0.75rem;
+    font-size: 1rem;
+    background: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
     cursor: pointer;
-}
+  }
+  
+  form button:hover {
+    background: #444;
+  }
+  
+  .two-fields {
+    display: grid;
+    grid-template-columns: auto 200px auto 80px;
+    gap: 1rem;          /* space between labels/inputs */
+    align-items: center;
+  }
+  
+  /* Labels in the nested grid */
+  .two-fields label {
+    text-align: right;  /* match your existing label style */
+    font-weight: bold;
+  }
+  
+  /* Inputs in the nested grid */
+  .two-fields input {
+    width: 100%;
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  
+  /* Responsive Design: Stack inline fields on small screens */
+  @media (max-width: 600px) {
+    form {
+      grid-template-columns: 1fr;
+    }
+    form label {
+      text-align: left;
+    }
+    form button {
+      grid-column: 1;
+    }
+    .two-fields {
+        grid-template-columns: 1fr;
+    }
+  }
+  

@@ -18,7 +18,7 @@
   </header>
 
   <main>
-    <h1>Contact Us</h1>
+    <h1>Contact Us!</h1>
     <form id="contactForm">
       <label for="reason">Reason for Contact:</label>
       <select id="reason" name="reason" required>
@@ -32,24 +32,27 @@
 
       <label for="parentEmail">Parent Email:</label>
       <input type="email" id="parentEmail" name="parentEmail" required>
-
+  
       <label for="parentPhone">Parent Phone Number:</label>
       <input type="tel" id="parentPhone" name="parentPhone" required>
 
-      <label for="methodOfContact">Preferred method for contact: </label>
+      <label for="methodOfContact">Preferred Method for Contact:</label>
       <select id="methodOfContact" name="methodOfContact" required>
-        <option value="phone">phone</option>
-        <option value="email">email</option>
+        <option value="phone">Phone</option>
+        <option value="email">Email</option>
       </select>
 
-      <label for="studentName">Student's Name:</label>
-      <input type="text" id="studentName" name="studentName" required>
+      <div class="two-fields" style="grid-column: 1 / span 2;">
+        <label for="studentName">Student's Name:</label>
+        <input type="text" id="studentName" name="studentName" required>
+    
+        <label for="studentGrade">Student's Grade:</label>
+        <input type="text" id="studentGrade" name="studentGrade" required>
+      </div>
 
-      <label for="studentGrade">Student's Grade:</label>
-      <input type="text" id="studentGrade" name="studentGrade" required>
-
-      <label for="additionalInfo">Additional information you would like us to know!:</label>
-      <input type="text" id="additionalInfo" name="additionalInfo" required>
+      <label for="additionalInfo">Additional Information:</label>
+      <!-- Switch to textarea for multi-line input -->
+      <textarea id="additionalInfo" name="additionalInfo" rows="3" required></textarea>
 
       <button type="submit">Submit</button>
     </form>
@@ -62,9 +65,7 @@
   <script type="text/javascript">
     // Initialize EmailJS with your User ID (replace 'YOUR_USER_ID' with your actual user ID)
     (function(){
-      emailjs.init({
-        publicKey: "ffnfBcrutFyLIye3Z",
-      });
+      emailjs.init("IJeEEzxI8tjndEdYb");
     })();
 
     // Handle form submission
