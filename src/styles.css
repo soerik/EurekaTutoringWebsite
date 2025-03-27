@@ -7,40 +7,72 @@ body {
     color: #333;
   }
   
-  header nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    background: #ff912a;
-    padding: 0;
-    margin: 0;
-  }
+  /* Stack header items vertically */
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Flex row for logo and title */
+.header-top {
+  display: flex;
+  align-items: center;
+  gap: 1rem; /* Adjust spacing as needed */
+}
+
+/* Optionally style the navigation */
+header nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  padding: 0;
+  margin: 1rem 0 0 0; /* Some top margin to separate from header-top */
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  background: #ffb522;
+  padding: 0.75rem 1rem;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+header nav ul li a:hover {
+  background: #444;
+}
+
+.home-page main {
+  width: 90%;      /* or 90%, if you want a bit of side padding */
+  max-width: none;  /* explicitly remove any max-width */
+  margin: 0 auto;   /* optional if you want it centered, but with no limit */
+}
+
+/* About page: apply a max width */
+.aboutus-page main {
+  width: 90%;         /* or whatever width you prefer */
+  max-width: none;  /* limit how wide it can get on large screens */
+  margin: 0 auto;     /* center the main container horizontally */
+}
+
+.contact-page main {
+  width: 90%;         /* or whatever width you prefer */
+  max-width: 700px;  /* limit how wide it can get on large screens */
+  margin: 0 auto;     /* center the main container horizontally */
+}
+
   
-  header nav ul li {
-    margin: 0 1rem;
-  }
-  
-  header nav ul li a {
-    color: #ffffff;
-    text-decoration: none;
-    padding: 0.75rem 1rem;
-    display: inline-block;
-    font-weight: bold;
-    }
-  
-  header nav ul li a:hover {
-    background: #444;
-  }
   
   /* Main Content Area */
   main {
     width: 90%;
-    max-width: 700px;
     margin: 2rem auto;
     background: #fff;
     padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    line-height: 1.5;
   }
   
   h1 {
@@ -90,7 +122,7 @@ body {
   form button:hover {
     background: #444;
   }
-  
+
   .two-fields {
     display: grid;
     grid-template-columns: auto 200px auto 80px;
@@ -128,10 +160,67 @@ body {
     .two-fields {
         grid-template-columns: 1fr;
     }
+    .two-column-container {
+      flex-direction: column;  /* Stacks them vertically */
+      align-items: center;     /* Optional: center the columns when stacked */
+    }
   }
 
   img {
     max-width: 100%; /* Scales down the image if it's too large */
     height: auto;    /* Keeps aspect ratio */
   }
+
+  .logo {
+    width: 50px;       /* adjust the size of your logo */
+    height: auto;      /* keeps the aspect ratio */
+  }
+
+  .contact-help {
+    margin-top: 2rem;
+    text-align: center;
+    padding: 1rem;
+    background-color: #f9f9f9; /* light background color */
+    border-top: 1px solid #ccc;
+  }
+  
+  .contact-help h2 {
+    margin-bottom: 0.5rem;
+  }
+  
+  .contact-help a {
+    color: #007BFF; /* a blue shade */
+    text-decoration: none;
+  }
+  
+  .contact-help a:hover {
+    text-decoration: underline;
+  }
+
+  .two-column-container {
+    display: flex;         /* Use Flexbox */
+    gap: 2rem;             /* Space between columns */
+    justify-content: center; /* Centers the columns horizontally, if desired */
+    margin: 2rem auto;    /* Spacing around the container */
+    width: 90%;
+  }
+  
+
+  .schedule {
+    flex: 1;                            /* Each box takes up equal space */
+    background-color: #fff;             /* White background */
+    padding: 1.5rem;                    /* Inner spacing */
+    border-radius: 8px;                 /* Rounded corners */
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Subtle shadow */
+  }
+  .aboutme, 
+  .mission {
+    flex: 1;                  /* Each section shares available space equally */
+    background-color: #fff;   /* If you want a card-like box */
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+ 
+  
   

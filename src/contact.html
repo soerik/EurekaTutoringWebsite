@@ -6,15 +6,20 @@
   <title>Contact</title>
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="contact-page">
   <header>
+    <div class="header-top">
+      <h1>Eureka Tutoring</h1>
+      <img src="../img/logoclear.png" alt="Eureka Tutoring Logo" class="logo">
+    </div>
     <nav>
       <ul>
         <li><a href="index.html">Home</a></li>
-        <li><a href="aboutme.html">About Me</a></li>
+        <li><a href="aboutus.html">About Us</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
+    
   </header>
 
   <main>
@@ -22,7 +27,7 @@
     <form id="contactForm">
       <label for="reason">Reason for Contact:</label>
       <select id="reason" name="reason" required>
-        <option value="booking">Booking diagnostic Consult</option>
+        <option value="booking">Booking Diagnostic Consult</option>
         <option value="review">Review</option>
         <option value="other">Other (Please specify in Additional Information)</option>
       </select>
@@ -56,6 +61,11 @@
 
       <button type="submit">Submit</button>
     </form>
+
+    <section class="contact-help">
+      <h2>Have any questions?</h2>
+      <p>Email us at <a href="mailto:eurekapersonaltutoring@gmail.com">eurekapersonaltutoring@gmail.com</a></p>
+    </section>
   </main>
 
   <!-- Include EmailJS SDK -->
