@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="aboutme.html">About Me</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h1>Contact Us</h1>
+    <form id="contactForm">
+      <label for="reason">Reason for Contact:</label>
+      <select id="reason" name="reason" required>
+        <option value="booking">Booking diagnostic/consult</option>
+        <option value="review">Review</option>
+        <option value="other">Other</option>
+      </select>
+
+      <label for="parentName">Parent Name:</label>
+      <input type="text" id="parentName" name="parentName" required>
+
+      <label for="parentEmail">Parent Email:</label>
+      <input type="email" id="parentEmail" name="parentEmail" required>
+
+      <label for="parentPhone">Parent Phone Number:</label>
+      <input type="tel" id="parentPhone" name="parentPhone" required>
+
+      <label for="methodOfContact">Preferred method for contact: </label>
+      <select id="methodOfContact" name="methodOfContact" required>
+        <option value="phone">phone</option>
+        <option value="email">email</option>
+      </select>
+
+      <label for="studentName">Student's Name:</label>
+      <input type="text" id="studentName" name="studentName" required>
+
+      <label for="studentGrade">Student's Grade:</label>
+      <input type="text" id="studentGrade" name="studentGrade" required>
+
+      <label for="additionalInfo">Additional information you would like us to know!:</label>
+      <input type="text" id="additionalInfo" name="additionalInfo" required>
+
+      <button type="submit">Submit</button>
+    </form>
+  </main>
+
+  <!-- Include EmailJS SDK -->
+  <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+  </script>
+  <script type="text/javascript">
+    // Initialize EmailJS with your User ID (replace 'YOUR_USER_ID' with your actual user ID)
+    (function(){
+      emailjs.init({
+        publicKey: "ffnfBcrutFyLIye3Z",
+      });
+    })();
+
+    // Handle form submission
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent the default form submission
+
+      // Collect the form data
+      const formData = {
+        reason: document.getElementById('reason').value,
+        parentName: document.getElementById('parentName').value,
+        parentEmail: document.getElementById('parentEmail').value,
+        parentPhone: document.getElementById('parentPhone').value,
+        methodOfContact: document.getElementById('methodOfContact').value,
+        studentName: document.getElementById('studentName').value,
+        studentGrade: document.getElementById('studentGrade').value,
+        additionalInfo: document.getElementById('additionalInfo').value,
+      };
+
+      // Send the email using EmailJS (replace 'YOUR_SERVICE_ID' and 'YOUR_TEMPLATE_ID' with your actual IDs)
+      emailjs.send("service_oud3e5m", "template_b3i8iq3", formData)
+        .then(function(response) {
+          alert('Email sent successfully!');
+          // Optionally, reset the form
+          document.getElementById('contactForm').reset();
+        }, function(error) {
+          alert('Failed to send email. Please try again later.');
+          console.error('EmailJS error:', error);
+        });
+    });
+  </script>
+</body>
+</html>
