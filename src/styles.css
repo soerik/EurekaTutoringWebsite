@@ -129,4 +129,9 @@ body {
         grid-template-columns: 1fr;
     }
   }
+
+  img {
+    max-width: 100%; /* Scales down the image if it's too large */
+    height: auto;    /* Keeps aspect ratio */
+  }
   
