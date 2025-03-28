@@ -220,7 +220,24 @@ header nav ul li a:hover {
     padding: 1.5rem;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
   }
+
+  .welcome {
+    flex: 1;                  /* Each section shares available space equally */
+    background-color: #fff;   /* If you want a card-like box */
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: center;
+  }
+
+  .site-title {
+    font-size: 3rem; /* Adjust as needed */
+    /* You can also change color, weight, etc. */
+    font-weight: bold;
+  }
+ 
  
   
   
