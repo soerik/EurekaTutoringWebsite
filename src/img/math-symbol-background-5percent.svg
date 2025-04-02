@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="300" height="300" viewBox="0 0 300 300">
+  <defs>
+    <style>
+      .cls-1 {
+        opacity: .05;
+      }
+    </style>
+  </defs>
+  <g class="cls-1">
+    <rect x="62.2" y="28" width="26.67" height="94.73"/>
+  </g>
+  <g class="cls-1">
+    <polygon points="198.64 218.62 174.04 194.34 192.89 175.73 217.49 200.01 198.64 218.62"/>
+  </g>
+  <g class="cls-1">
+    <rect x="28.07" y="62.74" width="34.13" height="26.32"/>
+  </g>
+  <g class="cls-1">
+    <rect x="171" y="62.74" width="96" height="26.32"/>
+  </g>
+  <g class="cls-1">
+    <rect x="27" y="204.84" width="96" height="26.32"/>
+  </g>
+  <g class="cls-1">
+    <polygon points="217.84 236.51 236.69 217.9 261.3 242.19 242.45 260.79 217.84 236.51"/>
+  </g>
+  <g class="cls-1">
+    <polygon points="242.31 175.02 261.17 193.63 193.28 260.62 174.43 242.01 242.31 175.02"/>
+  </g>
+  <g class="cls-1">
+    <rect x="88.87" y="62.74" width="34.13" height="26.32"/>
+  </g>
+  <ellipse class="cls-1" cx="75.8" cy="182.49" rx="14.67" ry="14.5"/>
+  <ellipse class="cls-1" cx="74.86" cy="253.61" rx="14.67" ry="14.5"/>
+</svg>

@@ -5,6 +5,9 @@ body {
     font-family: Arial, sans-serif;
     background: #73abff;
     color: #333;
+    background-image: url("img/math-symbol-background-5percent.svg");
+    background-repeat: repeat;
+    background-size: 150px 150px;
   }
   
   /* Stack header items vertically */
@@ -40,7 +43,7 @@ header nav ul li a {
 }
 
 header nav ul li a:hover {
-  background: #444;
+  background: #ffa424;
 }
 
 .home-page main {
@@ -164,6 +167,9 @@ header nav ul li a:hover {
       flex-direction: column;  /* Stacks them vertically */
       align-items: center;     /* Optional: center the columns when stacked */
     }
+    .two-column-grid {
+      grid-template-columns: 1fr;
+    }
   }
 
   img {
@@ -237,6 +243,85 @@ header nav ul li a:hover {
     /* You can also change color, weight, etc. */
     font-weight: bold;
   }
+
+  .btn-appointment {
+    display: inline-block;       /* So it behaves like a button, not just text */
+    background: #ffb522;
+    color: #333;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bolder;
+    transition: background-color 0.2s ease-in-out;
+    margin-top: 1rem;            /* Optional spacing above/below */
+  }
+  
+  .btn-appointment:hover {
+    background-color: #ffaa33;
+  }
+
+  /* Two-Column Grid for Top Section */
+.two-column-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two equal columns */
+  gap: 2rem;                    /* Space between columns */
+  margin: 2rem auto;
+  width: 90%;
+  max-width: 1200px;            /* Adjust as needed */
+}
+
+/* Left Column: Stack welcome and courses vertically */
+.left-column {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* Right Column: For schedule content */
+.right-column {
+  /* Additional styling if needed */
+}
+
+/* Shared Box Styles */
+.welcome,
+.courses-offered,
+.schedule {
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Contact/Questions Section - Full Width Below */
+.contact-help {
+  margin: 2rem auto;
+  width: 90%;
+  max-width: 1200px;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  text-align: center;
+  border-top: 1px solid #ccc;
+}
+
+/* Example Button Styling */
+.btn-appointment {
+  display: inline-block;
+  background: #ffbb44;
+  color: #333;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: background-color 0.2s ease-in-out;
+  margin-top: 1rem;
+}
+
+.btn-appointment:hover {
+  background-color: #ffaa33;
+}
+
+/* Responsive: Stack columns on narrow screens */
+
  
  
   
